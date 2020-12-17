@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF">
+
+        <TextView
+            android:id="@+id/textView18"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="16dp"
+            android:text="Nome completo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile_update_profile_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginTop="8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintStart_toStartOf="@+id/textView18"
+            app:layout_constraintTop_toBottomOf="@+id/textView18">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="Maura Ferreira da Costa"
+                android:id="@+id/profile_update_profile_name_input"
+                style="@style/Prudential.InputTextStyle"
+                android:imeOptions="actionNext"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <prudential.pobmobilecustomerappandroid.ui.viewCustom.CustomUploadFile
+            android:id="@+id/profile_update_profile_name_upload"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/profile_update_profile_name"
+            app:layout_constraintRight_toRightOf="@id/profile_update_profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_name"
+            app:showJustification="true" />
+
+        <TextView
+            android:id="@+id/textView20"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Estado civil"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_name"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_name"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_name_upload" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile_update_profile_marital_status"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginTop="8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/textView20"
+            app:layout_constraintStart_toStartOf="@+id/textView20"
+            app:layout_constraintTop_toBottomOf="@+id/textView20">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:text="Cassado(a)"
+                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:id="@+id/profile_update_profile_marital_status_input"
+                style="@style/Prudential.InputTextStyle"
+                android:drawableEnd="@drawable/ic_arrow_double"
+                android:imeOptions="actionNext"
+                android:inputType="text|number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/profile_update_profile_matrial_status_include"
+            layout="@layout/dropdown_list_select"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_marital_status"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_marital_status"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_marital_status" />
+
+
+        <TextView
+            android:id="@+id/textView21"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Nacionalidade"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_marital_status"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_marital_status"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_matrial_status_include" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile_update_profile_nationality"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginTop="8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/textView21"
+            app:layout_constraintStart_toStartOf="@+id/textView21"
+            app:layout_constraintTop_toBottomOf="@+id/textView21">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:focusableInTouchMode="false"
+                android:id="@+id/profile_update_profile_nationality_input"
+                style="@style/Prudential.InputTextStyle"
+                android:drawableEnd="@drawable/ic_arrow_double"
+                android:imeOptions="actionNext"
+                android:inputType="text|number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <include
+            android:visibility="gone"
+            android:id="@+id/profile_update_profile_nationality_include"
+            layout="@layout/dropdown_list_select"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_nationality"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_nationality"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_nationality" />
+
+        <androidx.constraintlayout.widget.Group
+            android:visibility="gone"
+            android:id="@+id/profile_update_profile_nationality_upload_group"
+            app:constraint_referenced_ids="profile_update_profile_green_card_text,profile_update_profile_nationality_upload"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_update_profile_green_card_text"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/profile_update_profile_attention_nationality_string"
+            android:textColor="@color/colorBlackLightTextSub"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_nationality"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_nationality"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_nationality_include" />
+
+
+        <prudential.pobmobilecustomerappandroid.ui.viewCustom.CustomUploadFile
+            android:id="@+id/profile_update_profile_nationality_upload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_green_card_text"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_green_card_text"
+            app:layout_constraintTop_toBottomOf="@id/profile_update_profile_green_card_text"
+            app:showJustification="false" />
+
+        <TextView
+            android:id="@+id/textView22"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Residência fiscal"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_nationality"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_nationality"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_nationality_upload" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile_update_profile_tax_address"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginTop="8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="@+id/textView22"
+            app:layout_constraintStart_toStartOf="@+id/textView22"
+            app:layout_constraintTop_toBottomOf="@+id/textView22">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:clickable="true"
+                android:focusableInTouchMode="false"
+                android:id="@+id/profile_update_profile_tax_address_input"
+                style="@style/Prudential.InputTextStyle"
+                android:drawableEnd="@drawable/ic_arrow_double"
+                android:imeOptions="actionNext"
+                android:inputType="text|number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <include
+            android:id="@+id/profile_update_profile_tax_address_include"
+            layout="@layout/dropdown_list_select"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_tax_address" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_update_profile_american_text"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/profile_update_profile_attention_string"
+            android:textColor="@color/colorBlackLightTextSub"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_tax_address_include" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/profile_update_profile_tin_group"
+            android:visibility="gone"
+            app:constraint_referenced_ids="textView27,profile_update_profile_tin_input"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/textView27"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="@string/profile_update_profile_option_string"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_american_text" />
+
+        <prudential.pobmobilecustomerappandroid.ui.viewCustom.CustomEditText
+            android:visibility="gone"
+            android:id="@+id/profile_update_profile_tin_input"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/textView27"
+            app:layout_constraintStart_toStartOf="@+id/textView27"
+            app:layout_constraintTop_toBottomOf="@+id/textView27"
+            app:viewText="TIN"
+            app:viewWidth="118dp" />
+
+        <TextView
+            android:id="@+id/textView26"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="RG"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintTop_toBottomOf="@id/profile_update_profile_tin_input" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile_update_profile_rg"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginTop="8dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/profile_update_profile_rg_date"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textView26"
+            app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_update_profile_rg_input"
+                style="@style/Prudential.InputTextStyle"
+                android:imeOptions="actionNext"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile_update_profile_rg_date"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/profile_update_profile_rg"
+            app:layout_constraintTop_toBottomOf="@+id/textView26">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_update_profile_rg_date_input"
+                style="@style/Prudential.InputTextStyle"
+                android:imeOptions="actionNext"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView29"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Expedição"
+            app:layout_constraintBottom_toBottomOf="@+id/textView26"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_tax_address"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_rg_date"
+            app:layout_constraintTop_toTopOf="@+id/textView26" />
+
+        <TextView
+            android:id="@+id/textView30"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Orgão expedidor"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_rg_date"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_rg"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_rg" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/profile_update_profile_rg_org"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView30"
+            app:layout_constraintTop_toBottomOf="@+id/textView30">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/profile_update_profile_rg_org_input"
+                style="@style/Prudential.InputTextStyle"
+                android:drawableEnd="@drawable/ic_arrow_double"
+                android:imeOptions="actionNext"
+                android:inputType="text|number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <prudential.pobmobilecustomerappandroid.ui.viewCustom.CustomUploadFile
+            android:visibility="gone"
+            android:id="@+id/profile_update_profile_rg_orgupload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_rg_org"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_rg_org"
+            app:layout_constraintTop_toBottomOf="@id/profile_update_profile_rg_org"
+            app:showJustification="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:backgroundTint="@color/colorWhite"
+            android:elevation="0dp"
+            android:fontFamily="@font/opensans_regular"
+            android:insetTop="0dp"
+            android:insetRight="0dp"
+            android:insetBottom="0dp"
+            android:text="Cancelar"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBlackText"
+            android:textSize="@dimen/textSizeDefault"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/profile_update_profile_confirm_button"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/profile_update_profile_rg_org"
+            app:layout_constraintTop_toBottomOf="@+id/profile_update_profile_rg_orgupload"
+            app:strokeColor="@color/colorButtonBorder"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profile_update_profile_confirm_button"
+            style="@style/Prudential.ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:text="Confirmar"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/profile_update_profile_rg_org"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintTop_toTopOf="@+id/button4" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

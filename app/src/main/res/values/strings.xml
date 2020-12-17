@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">Prudential</string>
+
+
+    <!-- ERROS AUTENTICATION -->
+    <string name="erro_doc_datas">Data inválida!</string>
+    <string name="erro_doc_data">Data inválida!</string>
+    <string name="erro_doc">Hummm, esse número está certo?</string>
+    <string name="erro_fiel_0_password_two">Você digitou senhas diferentes.</string>
+    <string name="erro_fiel_0_password">Não se esqueça da senha!</string>
+    <string name="erro_fiel_0_cpf_cnpj">Hummm, esse número está certo?</string>
+    <string name="erro_fiel_date">Selecione a data nascimento.</string>
+    <string name="erro_fiel_day">Ops, qual dia você selecionou?</string>
+    <string name="erro_fiel_month">Ops, qual mês você selecionou?</string>
+    <string name="erro_fiel_year">Ops, qual ano você selecionou?.</string>
+    <string name="erro_password_no">Senha incorreta. Vai de novo?</string>
+    <string name="erro_user_doc_ok">Senha incorreta. Vai de novo?</string>
+    <string name="erro_data_erro">Data nascimento inválida.</string>
+    <string name="erro_password_erro"> Você digitou senhas diferentes.</string>
+    <string name="erro_password_erro_3">Não se esqueça da senha!</string>
+    <string name="erro_password_erro_2">Você viu as regras para senha?</string>
+    <string name="erro_password_day_month"> Olha, esse mês não tem 31 dias.</string>
+    <string name="erro__month">Ops, qual mês você digitou?</string>
+    <string name="erro__day">Ops, qual dia você digitou?</string>
+    <string name="erro__year">Ops, qual ano você digitou?</string>
+    <string name="erro__date">Ops, qual data você digitou?</string>
+    <string name="erro__date_two">Reveja a data do primeiro campo!</string>
+
+    <string name="erro_token">O código que recebeu é esse mesmo?</string>
+    <string name="token_ok">Token colado com sucesso.</string>
+    <string name="erro_conexao">Não há conexão.</string>
+    <string name="erro_login_blank">Por favor, insira seus dados</string>
+
+
+    <!-- MENU TAB APP -->
+    <string name="menu_inicio">Início</string>
+    <string name="menu_meus_dados">Meus dados</string>
+    <string name="menu_contrato">Contrato</string>
+    <string name="menu_extrato">Extratos</string>
+    <string name="menu_mais">Mais</string>
+
+    <!-- LOGOUT -->
+    <string name="logout">Deseja sair?</string>
+
+    <!-- TOUCH IS -->
+    <string name="touch_id_title_login">Touch ID</string>
+    <string name="touch_id_title_cadastre">Acesse com Touch ID</string>
+    <string name="touch_id_descripition">Use o seu recurso de Touch ID para agilizar o seu acesso.</string>
+    <string name="touch_id_descripition_start">Use o seu recurso de Touch ID para autenticação.</string>
+
+    <!-- TOKEN -->
+    <string name="token_password_ok">Senha alterada com sucesso.</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="about_dicas">
+    <![CDATA[
+• Não compartilhe nem anote sua senha em lugar de fácil acesso;\n\n• Lembre-se: sua senha é sigilosa, pessoal e intransferível;\n\n• Nenhum funcionário da Prudential do Brasil vai te procurar para pedir sua senha;\n\n• Crie sua senha usando letras maiúsculas e minúsculas, números e símbolos. Isso vai aumentar sua segurança! Evite também usar seu CPF ou CNPJ;\n\n• Evite usar números ou informações que outras pessoas saibam sobre você e sua família.\n\n]]>
+</string>
+
+    <!-- EXTRACT -->
+    <string name="list_0_extract">Não há lançamentos com esses filtros!</string>
+    <string name="copy_sucess">Dados copiados com sucesso!</string>
+    <string name="number_protocal">Número do protocolo:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Payment Data Fragment -->
+    <string name="fragment_payment_data_title">Alterar dados de pagamento</string>
+    <string name="fragment_payment_data_tip_title">Uma dica para agilizar</string>
+    <string name="fragment_payment_data_tip_message">Selecione todos os seguros que deseja alterar. Assim, o que for alterado em um, será também mudado nos outros selecionados.</string>
+    <string name="fragment_payment_data_choose_policy_title">Selecione o seu seguro</string>
+    <string name="fragment_payment_data_subtitle">Dados de pagamento</string>
+    <string name="profile_update_profile_attention_string"><font face="opensans_bold.ttf"><b>ATENÇÃO:</b></font> Caso você esteja morando em outro país, insira seu número de identificação do contribuinte abaixo</string>
+    <string name="profile_update_profile_attention_nationality_string"><font face="opensans_bold.ttf"><b>NOTA:</b></font> Se você é um cidadão ou possui um passaporte norte-americano ou green card, você também será considerado um residente fiscal nos EUA, ainda que resida fora dos EUA.</string>
+    <string name="profile_update_profile_option_string"><font face="opensans_bold.ttf"><b>Número de identificação fiscal</b></font> <font color="#666666">(opcional)</font></string>
+    <string name="protocolo">Número do protocolo: <font face="opensans_bold.ttf"><b>1232344</b></font></string>
+    <string name="profile_update_contact_option_phone"><b>Telefone alternativo </b><font color="#666666">(opcional)</font></string>
+    <string name="fragment_profile_update_confirmation_string">Você será notificado quando a alteração for processada no site. Se preferir, acompanhe o status do seu pedido em <font face="opensans_bold.ttf" color="#07639D"><b>Minhas Solicitações.</b></font></string>
+    <string name="fragment_token_help_string"><font color="#1A1D1E"><i>Caso esteja sem acesso ao telefone e e-mail, entre em contato com o </i></font><font face="opensans_bold.ttf" color="#07639D"><b>Atendimento</b></font>.</string>
+
+</resources>

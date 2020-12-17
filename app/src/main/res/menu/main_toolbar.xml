@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/m1"
+            android:checked="true"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_inicio" />
+
+        <item
+            android:id="@+id/m2"
+            android:icon="@drawable/ic_menu_user"
+            android:title="@string/menu_meus_dados" />
+
+        <item
+            android:id="@+id/m3"
+            android:checked="true"
+            android:icon="@drawable/ic_menu_contract"
+            android:title="@string/menu_contrato" />
+
+        <item
+            android:id="@+id/m4"
+            android:icon="@drawable/ic_menu_extract"
+            android:title="@string/menu_extrato" />
+
+    </group>
+
+
+
+</menu>

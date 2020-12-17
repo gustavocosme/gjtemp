@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/colorBackgroundCardEditData"
+    app:cardCornerRadius="5dp"
+
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/custom_upload_file_justification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/opensans_regular"
+                android:isScrollContainer="true"
+                android:text="Para alteração de seu nome, é necessário:"
+                android:textColor="@color/colorBlackText"
+                android:textSize="@dimen/textSizeDefault"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/textView36"
+                style="@style/Prudential.TitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Justificativa"
+                app:layout_constraintEnd_toEndOf="@+id/textView35"
+                app:layout_constraintStart_toStartOf="@+id/textView35"
+                app:layout_constraintTop_toBottomOf="@+id/textView35" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/custom_upload_file_justify"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/inputLayoutHeight"
+                android:layout_marginTop="8dp"
+                app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+                app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+                app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+                app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+                app:boxStrokeErrorColor="@color/errorColor"
+                app:errorEnabled="true"
+                app:hintAnimationEnabled="false"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="@+id/textView35"
+                app:layout_constraintStart_toStartOf="@+id/textView35"
+                app:layout_constraintTop_toBottomOf="@+id/textView36">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:id="@+id/custom_upload_file_justify_input"
+                    style="@style/Prudential.InputTextStyle"
+                    android:background="@drawable/bg_button_border_gray_white_back"
+                    android:drawableEnd="@drawable/ic_arrow_double"
+                    android:imeOptions="actionNext"
+                    android:inputType="text|number"
+                    android:hint="Selecione um motivo"
+                    android:textColorHint="@color/colorGrayLight" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <include
+                android:visibility="gone"
+                android:id="@+id/custom_upload_file_justification_include"
+                layout="@layout/dropdown_list_select"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/custom_upload_file_justify"
+                app:layout_constraintStart_toStartOf="@+id/custom_upload_file_justify"
+                app:layout_constraintTop_toBottomOf="@+id/custom_upload_file_justify" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/colorGreyBakCardUpload"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/custom_upload_file_justification"
+            app:strokeColor="@color/colorGrayLight"
+            app:strokeWidth="1dp">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/custom_upload_file_justification">
+
+                <ImageView
+                    android:id="@+id/imageView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/ic_file_upload"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="Envie um documento para validação. (2 Mb)"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView18"
+                    app:layout_constraintEnd_toStartOf="@+id/custom_upload_file_button"
+                    app:layout_constraintStart_toEndOf="@+id/imageView18"
+                    app:layout_constraintTop_toTopOf="@+id/imageView18" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/custom_upload_file_button"
+                    style="@style/Prudential.ButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingTop="0dp"
+                    android:insetLeft="0dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="0dp"
+                    android:text="Anexar arquivo"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView31"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView31" />
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:fontFamily="@font/opensans_italic"
+                    android:text="Documentos aceitos: CPF, RG, Certidão de Nascimento, CNH, Certidão de Casamento ou Carteira Profissional."
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlackLightTextCard"
+                    android:textSize="11sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/custom_upload_file_button"
+                    app:layout_constraintHorizontal_bias="0.503"
+                    app:layout_constraintStart_toStartOf="@+id/imageView18"
+                    app:layout_constraintTop_toBottomOf="@+id/custom_upload_file_document_name" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/custom_upload_file_document_group"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="textView33,custom_upload_file_close_button,custom_upload_file_document_name"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:visibility="gone"
+                    android:text="Documentos enviados:"
+                    android:textColor="@color/colorBlackText"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="@+id/custom_upload_file_button"
+                    app:layout_constraintStart_toStartOf="@+id/imageView18"
+                    app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/custom_upload_file_close_button"
+                    android:layout_width="14dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView33"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33"
+                    app:srcCompat="@drawable/fa_times_circle" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:visibility="gone"
+                    android:id="@+id/custom_upload_file_document_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:fontFamily="@font/opensans_regular"
+                    android:text="CertidaoCasamento.pdf"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/custom_upload_file_close_button"
+                    app:layout_constraintEnd_toEndOf="@+id/textView33"
+                    app:layout_constraintStart_toEndOf="@+id/custom_upload_file_close_button"
+                    app:layout_constraintTop_toTopOf="@+id/custom_upload_file_close_button" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

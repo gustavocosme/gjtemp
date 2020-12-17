@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomEditText">
+        <attr name="viewWidth" format="dimension" />
+        <attr name="viewHeight" format="dimension" />
+        <attr name="viewText" format="string" />
+        <attr name="viewBackgroundColor" format="color"/>
+        <attr name="viewIcon" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="CustomUploadFile">
+        <attr name="showJustification" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="CurrencyEditText">
+        <attr name="allow_negative_values" format="boolean" />
+        <attr name="decimal_digits" format="integer" />
+    </declare-styleable>
+
+</resources>

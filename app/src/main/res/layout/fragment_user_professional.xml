@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="44dp"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFF">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l3">
+
+            <Button
+                android:id="@+id/btnNext"
+                style="@style/Prudential.ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_marginEnd="18dp"
+                android:text="Confirmar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView10"
+                app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+            <Button
+                android:id="@+id/btnBack"
+                style="@style/Prudential.ButtonStyle"
+                android:layout_width="0dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_button_border_gray"
+                android:text="Cancelar"
+                android:textColor="@color/colorBlackLightTextCard"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/imageView10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/imageView10"
+                android:layout_width="18dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="16dp"
+                android:alpha="0.0"
+                android:background="@color/attentionColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="invisible" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        <TextView
+            android:id="@+id/txt3"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Atividade principal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l2" />
+
+        <TextView
+            android:id="@+id/txt2"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Profissão"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l1" />
+
+        <TextView
+            android:id="@+id/txt1"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:text="Renda anual"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/l1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt1">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:singleLine="true"
+                android:maxLength="16"
+                android:id="@+id/txtMoneyy"
+                style="@style/Prudential.InputTextStyle"
+                android:digits="0123456789"
+                android:hint="Renda anual"
+                android:imeOptions="actionNext"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/l2"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt2">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:id="@+id/txtProfessional"
+                android:text=""
+                style="@style/Prudential.InputTextStyle"
+                android:drawableRight="@drawable/ic_arrow_double"
+                android:drawablePadding="16dp"
+                android:enabled="false"
+                android:focusable="false"
+                android:hint="Profissão" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnProfessional"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:alpha="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt2"></Button>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/l3"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtMain"
+                style="@style/Prudential.InputTextStyle"
+                android:hint="Atividade principal"
+                android:text="UX Designer"
+                android:imeOptions="actionSend"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            app:cardBackgroundColor="#FFF"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:id="@+id/listCard"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="96dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/l2"
+            app:strokeColor="@color/colorGrayLight"
+            app:strokeWidth="1dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginLeft="8dp"
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFF"
+                android:scrollbars="vertical"
+                android:visibility="visible"
+                />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:alpha="0.0"
+                android:background="@color/colorGrayLight">
+
+            </View>
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

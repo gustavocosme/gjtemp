@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_login_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+
+    <LinearLayout
+        android:paddingBottom="44dp"
+        android:paddingLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/btnSolicit"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Solicitar indenização"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:fontFamily="@font/prudentialmodern_boldcond_webfont"
+            />
+
+        <TextView
+            android:id="@+id/btnConfiguration"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Configurações"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            android:fontFamily="@font/prudentialmodern_boldcond_webfont"
+            />
+
+
+        <TextView
+            android:id="@+id/btnPrivacity"
+            android:layout_marginTop="33dp"
+            android:layout_gravity="center_vertical"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Política de privacidade"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:fontFamily="@font/opensans_bold"
+            />
+
+        <View
+            android:layout_marginTop="-1dp"
+            android:background="@color/colorWhite"
+            android:layout_width="136dp"
+            android:layout_height="1dp">
+
+        </View>
+
+        <TextView
+            android:id="@+id/btnTerms"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_vertical"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Termos de uso"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:fontFamily="@font/opensans_bold"
+            />
+
+        <View
+            android:layout_marginTop="-1dp"
+            android:background="@color/colorWhite"
+            android:layout_width="86dp"
+            android:layout_height="1dp">
+
+        </View>
+
+        <TextView
+            android:id="@+id/txtVersion"
+            android:layout_marginTop="22dp"
+            android:layout_gravity="center_vertical"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="V.0.0.7"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:fontFamily="@font/opensans_bold"
+            />
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

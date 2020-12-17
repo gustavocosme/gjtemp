@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+    <Button
+        android:layout_marginTop="8dp"
+        android:id="@+id/fragment_user_btn_logout"
+        style="@style/Prudential.ButtonStyle"
+        android:text="Logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+   />
+
+    <Button
+        android:id="@+id/dialogTextbtn"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="Dialog text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_user_btn_logout" />
+
+    <Button
+        android:id="@+id/dialogTextbtnCopy"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="Dialog copy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTextbtn" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/dialogTextbtnTools"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="Dialog tools"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTextbtnCopy" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/dialogTextbtnFilter"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="Filter extract"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTextbtnTools" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/sheet1"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="Sheet 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialogTextbtnFilter" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/sheet2"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="Sheet 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sheet1" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/sheet3"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="Sheet 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sheet2" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/list1"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="List menu 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sheet3" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/list2"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="List menu 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list1" />
+
+    <Button
+        android:visibility="visible"
+        android:id="@+id/list3"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="2dp"
+        android:text="List menu 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never">
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerGG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".ui.fragment.PaymentDataFragment">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/materialTextView"
+                style="@style/Prudential.HeaderTitleStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/fragment_payment_data_title"
+                android:textAlignment="textStart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/fragment_payment_data_banner_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardBackgroundColor="@color/colorBackgroundCardEditData"
+                app:cardCornerRadius="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/materialTextView"
+                app:layout_constraintStart_toStartOf="@+id/materialTextView"
+                app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+                app:strokeColor="@color/colorPrimaryLight"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="78.92dp"
+                        android:layout_height="79.77dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/bg_edit_date_banner"
+                        app:layout_constraintStart_toStartOf="@+id/materialTextView2"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView2" />
+
+                    <ImageView
+                        android:id="@+id/fragment_pament_data_close_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/ic_close"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/materialTextView2"
+                        style="@style/Prudential.HeaderTitleStyleOpenSans"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/fragment_payment_data_tip_title"
+                        android:textAlignment="viewStart"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toStartOf="@+id/fragment_pament_data_close_button"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        style="@style/Prudential.HeaderSubTitleStyle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="12dp"
+                        android:letterSpacing="0.02"
+                        android:lineSpacingExtra="2dp"
+                        android:text="@string/fragment_payment_data_tip_message"
+                        android:textAlignment="textStart"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/fragment_pament_data_close_button"
+                        app:layout_constraintStart_toEndOf="@+id/imageView15"
+                        app:layout_constraintTop_toTopOf="@+id/imageView15" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/textView17"
+                style="@style/Prudential.SubTitleStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/fragment_payment_data_choose_policy_title"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/materialTextView"
+                app:layout_constraintStart_toStartOf="@+id/materialTextView"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_banner_card" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/fragment_payment_data_policy_recycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17"
+                tools:itemCount="2"
+                tools:listitem="@layout/recycler_extract_policy" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="12dp"
+                android:background="@color/colorGreyExtractBackground"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_policy_recycler">
+
+                <TextView
+                    android:id="@+id/textView19"
+                    style="@style/Prudential.TitleStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/fragment_payment_data_subtitle"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fragment_payment_data_pay_method_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/colorGreyExtractBackground"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView19"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/textView19"
+                    app:strokeColor="@color/colorGrayLight"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="0dp">
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/fragment_payment_data_group_list"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="fragment_payment_data_recycler_pay_method, fragment_payment_data_button_pay_method" />
+
+                        <TextView
+                            android:id="@+id/fragment_payment_data_subtitle_pay_method"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="Selecione um seguro para visualização"
+                            android:textColor="@color/colorBlackTextSub"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_title_pay_method"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_title_pay_method"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_title_pay_method"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:id="@+id/fragment_payment_data_icon_pay_method"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_credit_card_solid" />
+
+                        <TextView
+                            android:id="@+id/fragment_payment_data_title_pay_method"
+                            style="@style/Prudential.HeaderTitleStyleOpenSans"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="Forma de pagamento"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/textSizeDefault"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toEndOf="@+id/fragment_payment_data_icon_pay_method"
+                            app:layout_constraintTop_toTopOf="@+id/fragment_payment_data_icon_pay_method"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fragment_payment_data_button_pay_method"
+                            style="@style/Prudential.OutlinedButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:height="33dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:padding="0dp"
+                            android:text="Alterar"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_recycler_pay_method"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_recycler_pay_method"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_recycler_pay_method" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/fragment_payment_data_recycler_pay_method"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_title_pay_method"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_icon_pay_method"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_title_pay_method"
+                            tools:itemCount="1"
+                            tools:listitem="@layout/recycler_payment_edit_data_payment">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fragment_payment_data_date_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:cardBackgroundColor="@color/colorGreyExtractBackground"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView19"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_pay_method_card"
+                    app:strokeColor="@color/colorGrayLight"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="0dp">
+
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/fragment_payment_data_date_group_list"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="fragment_payment_data_recycler_date, fragment_payment_data_button_date" />
+
+                        <TextView
+                            android:id="@+id/fragment_payment_data_subtitle_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="Selecione um seguro para visualização"
+                            android:textColor="@color/colorBlackTextSub"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_title_date"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_title_date"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_title_date" />
+
+
+                        <ImageView
+                            android:id="@+id/fragment_payment_data_icon_date"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_calendar" />
+
+                        <TextView
+                            android:id="@+id/fragment_payment_data_title_date"
+                            style="@style/Prudential.HeaderTitleStyleOpenSans"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="Frequência"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/textSizeDefault"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/fragment_payment_data_icon_date"
+                            app:layout_constraintTop_toTopOf="@+id/fragment_payment_data_icon_date"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fragment_payment_data_button_date"
+                            style="@style/Prudential.OutlinedButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:height="33dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:padding="0dp"
+                            android:text="Alterar"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_recycler_date"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_recycler_date"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_recycler_date"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/fragment_payment_data_recycler_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_title_date"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_icon_date"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_icon_date"
+                            tools:itemCount="2"
+                            tools:listitem="@layout/recycler_payment_edit_data">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/fragment_payment_data_addreess_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="@color/colorGreyExtractBackground"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/textView19"
+                    app:layout_constraintStart_toStartOf="@+id/textView19"
+                    app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_date_card"
+                    app:strokeColor="@color/colorGrayLight"
+                    app:strokeWidth="1dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="0dp">
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/fragment_payment_data_address_group_list"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            app:constraint_referenced_ids="fragment_payment_data_recycler_address, fragment_payment_data_button_address" />
+
+                        <TextView
+                            android:id="@+id/fragment_payment_data_subtitle_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:fontFamily="@font/opensans_regular"
+                            android:text="Selecione um seguro para visualização"
+                            android:textColor="@color/colorBlackTextSub"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_title_address"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_title_address"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_title_address" />
+
+                        <ImageView
+                            android:id="@+id/fragment_payment_data_icon_address"
+                            android:layout_width="30dp"
+                            android:layout_height="25dp"
+                            android:layout_marginStart="14dp"
+                            android:layout_marginTop="28dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_local" />
+
+                        <TextView
+                            android:id="@+id/fragment_payment_data_title_address"
+                            style="@style/Prudential.HeaderTitleStyleOpenSans"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="12dp"
+                            android:text="Endereço de cobrança"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/colorBlackText"
+                            android:textSize="@dimen/textSizeDefault"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/fragment_payment_data_icon_address"
+                            app:layout_constraintTop_toTopOf="@+id/fragment_payment_data_icon_address"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/fragment_payment_data_button_address"
+                            style="@style/Prudential.OutlinedButtonStyle"
+                            android:layout_width="0dp"
+                            android:layout_height="33dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginBottom="16dp"
+                            android:height="33dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:padding="0dp"
+                            android:text="Alterar"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_recycler_address"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_recycler_address"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_recycler_address" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/fragment_payment_data_recycler_address"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:visibility="visible"
+                            app:layout_constraintEnd_toEndOf="@+id/fragment_payment_data_title_address"
+                            app:layout_constraintStart_toStartOf="@+id/fragment_payment_data_icon_address"
+                            app:layout_constraintTop_toBottomOf="@+id/fragment_payment_data_icon_address"
+                            tools:itemCount="2"
+                            tools:listitem="@layout/recycler_payment_edit_data">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/load"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.18"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/ic_loading" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

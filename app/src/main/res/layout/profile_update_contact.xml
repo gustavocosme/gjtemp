@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+
+    <TextView
+        android:id="@+id/textView23"
+        style="@style/Prudential.TitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="16dp"
+        android:text="Telefone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <prudential.pobmobilecustomerappandroid.ui.viewCustom.CustomEditText
+        android:id="@+id/customEditText"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@id/textView23"
+        app:viewText="Celular"
+        app:viewWidth="118dp" />
+
+    <TextView
+        android:id="@+id/textView37"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/opensans_italic"
+        android:text="Digite um número de celular para poder receber os códigos de acesso via mensagem."
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/customEditText"
+        app:layout_constraintStart_toStartOf="@+id/customEditText"
+        app:layout_constraintTop_toBottomOf="@+id/customEditText" />
+
+    <TextView
+        android:fontFamily="@font/opensans_regular"
+        style="@style/Prudential.TitleStyle"
+        android:id="@+id/textView38"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/profile_update_contact_option_phone"
+        app:layout_constraintEnd_toEndOf="@+id/customEditText"
+        app:layout_constraintStart_toStartOf="@+id/textView37"
+        app:layout_constraintTop_toBottomOf="@+id/textView37" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

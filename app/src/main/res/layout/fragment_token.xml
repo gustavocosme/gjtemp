@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="24dp"
+    android:background="@color/colorWhite"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/imageView"
+    app:layout_constraintVertical_bias="1.0">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Prudential.HeaderTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Confirme sua identidade"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:textSize="18sp"
+        android:fontFamily="@font/opensans_regular"
+        android:textColor="@color/colorBlackText"
+        android:id="@+id/textView2"
+        style="@style/Prudential.HeaderSubTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Digite o código de seis dígitos que enviamos para:"
+        android:textAlignment="viewStart"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_mobile_phone" />
+
+        <TextView
+            android:id="@+id/fragment_token_validation_phone_number"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="(21) 9******00"
+            android:textAlignment="textStart"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/imageView6"
+            app:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_email" />
+
+        <TextView
+            android:id="@+id/fragment_token_validation_email"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="m*******@gmail.com"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/imageView7"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/fragment_token_invisible_textview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toLeftOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_token_validation_inputlayout_1"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inputLayoutHeight"
+        android:layout_marginTop="50dp"
+        app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_token_validation_inputlayout_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_token_validation_token_1"
+            style="@style/Prudential.InputTexTokenStyle"
+            android:inputType="text|number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_token_validation_inputlayout_2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inputLayoutHeight"
+        app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_token_validation_inputlayout_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_token_validation_inputlayout_1"
+        app:layout_constraintTop_toTopOf="@+id/fragment_token_validation_inputlayout_1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_token_validation_token_2"
+            style="@style/Prudential.InputTexTokenStyle"
+            android:inputType="text|number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_token_validation_inputlayout_3"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inputLayoutHeight"
+        app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_token_validation_inputlayout_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_token_validation_inputlayout_2"
+        app:layout_constraintTop_toTopOf="@+id/fragment_token_validation_inputlayout_2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_token_validation_token_3"
+            style="@style/Prudential.InputTexTokenStyle"
+            android:inputType="text|number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_token_validation_inputlayout_4"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inputLayoutHeight"
+        app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_token_validation_inputlayout_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_token_validation_inputlayout_3"
+        app:layout_constraintTop_toTopOf="@+id/fragment_token_validation_inputlayout_3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_token_validation_token_4"
+            style="@style/Prudential.InputTexTokenStyle"
+            android:inputType="text|number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_token_validation_inputlayout_5"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inputLayoutHeight"
+        app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_token_validation_inputlayout_6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragment_token_validation_inputlayout_4"
+        app:layout_constraintTop_toTopOf="@+id/fragment_token_validation_inputlayout_4">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_token_validation_token_5"
+            style="@style/Prudential.InputTexTokenStyle"
+            android:inputType="text|number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_token_validation_inputlayout_6"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/inputLayoutHeight"
+        app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+        app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragment_token_validation_inputlayout_5"
+        app:layout_constraintTop_toTopOf="@+id/fragment_token_validation_inputlayout_5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_token_validation_token_6"
+            style="@style/Prudential.InputTexTokenStyle"
+            android:inputType="text|number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        style="@style/Prudential.SubTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Não recebeu? Fique tranquilo!"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_token_validation_inputlayout_6"
+        app:layout_constraintStart_toStartOf="@+id/fragment_token_validation_inputlayout_1"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_token_validation_inputlayout_1" />
+
+    <TextView
+        android:id="@+id/fragment_token_validation_resend_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/opensans_regular"
+        android:text="Você vai poder solicitar novamente o código em:"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryLight"
+        app:layout_constraintEnd_toEndOf="@+id/textView16"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="@+id/textView16"
+        app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+    <TextView
+        android:id="@+id/fragment_token_validation_resend_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/opensans_bold"
+        android:text="0:57"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_token_validation_resend_msg"
+        app:layout_constraintStart_toStartOf="@+id/fragment_token_validation_resend_msg"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_token_validation_resend_msg" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_token_validation_continue_button"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="24dp"
+        android:text="Continuar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_token_validation_resend_button" />
+
+
+    <Button
+        android:id="@+id/fragment_token_validation_resend_button"
+        style="@style/Prudential.OutlinedButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="resendSMS"
+        android:text="Solicitar novamente"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_token_validation_resend_count"
+        app:layout_constraintStart_toStartOf="@+id/fragment_token_validation_resend_count"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_token_validation_resend_count" />
+
+    <TextView
+        android:id="@+id/textView40"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/opensans_regular"
+        android:layout_marginEnd="16dp"
+        android:text="@string/fragment_token_help_string"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_token_validation_continue_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

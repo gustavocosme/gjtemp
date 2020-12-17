@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="120dp"
+    app:cardCornerRadius="0dp"
+    android:layout_marginLeft="16dp"
+    android:id="@+id/recycler_extract_policy_select_all_card"
+    android:layout_height="match_parent"
+    app:strokeColor="@color/colorGrayLight"
+    android:layout_marginRight="8dp"
+    android:padding="1dp"
+    app:strokeWidth="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/recycler_extract_policy_select_all_background"
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_marginRight="16dp"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/recycler_extract_policy_select_all_line"
+            android:layout_width="wrap_content"
+            android:layout_height="4dp"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/tagEmAtraso"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_tag_atension"
+            android:fontFamily="@font/opensans_bold"
+            android:padding="4dp"
+            android:text="EM ATRASO"
+            android:textColor="@color/colorWhite"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/recycler_extract_policy_select_all_checkbox"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="8dp"
+            android:button="@color/colorPrimary"
+            android:drawableStart="@drawable/bg_checkbox"
+            android:drawablePadding="4dp"
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_policy_select_all_line" />
+
+        <TextView
+            android:id="@+id/recycler_extract_policy_select_all_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:maxLines="2"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Todos os seguros"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_policy_select_all_checkbox" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

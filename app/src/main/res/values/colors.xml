@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#07639D</color>
+    <color name="colorPrimaryDark">#07639D</color>
+    <color name="colorAccent">#07639D</color>
+    <color name="errorColor">#EE0006</color>
+    <color name="attentionColor">#C15505</color>
+    <color name="oolorAttentionExtractSelect">#10c15505</color>
+    <color name="colorBlackText">#1A1D1E</color>
+    <color name="colorButtonDisable">#7007639D</color>
+    <color name="colorPrimaryLight">#98C3DE</color>
+    <color name="colorGrayLight">#cccccc</color>
+    <color name="colorButtonBorder">#999999</color>
+    <color name="colorGreenSuccess">#297C00</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="statusBarApp">#054E7C</color>
+    <color name="colorBlueBackCard">#E3F2F4</color>
+    <color name="colorGreyCard">#666666</color>
+    <color name="colorGreyExtractBackground">#f9f9f9</color>
+    <color name="colorBlueSelectPolicy">#E3F2F4</color>
+    <color name="colorMenu1">#7CADCB</color>
+    <color name="colorMenu2">#275D95</color>
+    <color name="colorBackgroundCardEditData">#F2F7FA</color>
+    <color name="colorBlackTextSub">#333333</color>
+    <color name="colorGreyBakCardUpload">#f2f2f2</color>
+    <color name="colorBlackLightTextSub">#999999</color>
+    <color name="colorBlackLightTextCard">#666666</color>
+    <color name="colorGreyBackInputText">#d8d8d8</color>
+
+</resources>

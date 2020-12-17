@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.navigation.NavigationView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_view2"
+    android:focusableInTouchMode="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/filter_txt_title"
+            style="@style/Prudential.HeaderTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_gravity="start"
+            android:background="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:text="Filtros"
+            android:textAlignment="@null"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textSize="14sp"
+            android:id="@+id/filter_txt1"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="28dp"
+            android:text="Lançamento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_txt_title" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/filter_check_realizado"
+            style="@style/Prudential.CheckStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:textSize="14sp"
+            android:text="Realizado"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_txt1" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/filter_check_atrasado"
+                style="@style/Prudential.CheckStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:textSize="14sp"
+                android:layout_marginStart="16dp"
+                android:text="Atrasado"
+                app:layout_constraintStart_toEndOf="@+id/filter_check_realizado"
+                app:layout_constraintTop_toTopOf="@+id/filter_check_realizado" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/filter_check_debito"
+                style="@style/Prudential.CheckStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:textSize="14sp"
+                android:text="Débito em conta"
+                app:layout_constraintStart_toEndOf="@+id/filter_check_credito"
+                app:layout_constraintTop_toTopOf="@+id/filter_check_credito" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/filter_check_assistencia"
+            style="@style/Prudential.CheckStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="18dp"
+                android:textSize="14sp"
+
+                android:layout_marginTop="16dp"
+            android:text="Assistência financeira"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_check_credito" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/filter_check_boleto"
+                style="@style/Prudential.CheckStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:text="Boleto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/filter_check_assistencia"
+                app:layout_constraintTop_toTopOf="@+id/filter_check_assistencia" />
+
+        <TextView
+            android:textSize="14sp"
+            android:id="@+id/filter_txt2"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="52dp"
+            android:text="Forma de pagamento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_check_realizado" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/filter_check_credito"
+            style="@style/Prudential.CheckStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:textSize="14sp"
+
+            android:text="Cartão de crédito"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_txt2" />
+
+        <TextView
+            android:id="@+id/filter_txt3"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="52dp"
+            android:text="Período"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_check_assistencia" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            android:id="@+id/filter_data_layout_ates"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/view5"
+            app:layout_constraintTop_toTopOf="@+id/filter_data_layout_de">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/filter_data_txt_ate"
+                    style="@style/Prudential.InputTextStyle"
+                    android:layout_height="match_parent"
+                    android:digits="0123456789"
+                    android:drawablePadding="8dp"
+                    android:hint="Até"
+                    android:imeOptions="actionSend"
+                    android:inputType="text|number"
+                    android:maxLength="10"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    android:textColorHint="@color/colorBlackText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:hintEnabled="false"
+            android:id="@+id/filter_data_layout_de"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintEnd_toStartOf="@+id/view5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_txt3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/filter_data_txt_de"
+                style="@style/Prudential.InputTextStyle"
+                android:layout_height="match_parent"
+                android:digits="0123456789"
+                android:drawablePadding="8dp"
+                android:hint="De"
+                android:textSize="14sp"
+                android:imeOptions="actionNext"
+                android:inputType="text|number"
+                android:maxLength="10"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColorHint="@color/colorBlackText" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/Prudential.ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="18dp"
+            android:text="Filtrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Prudential.ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button_selector"
+            android:text="Limpar"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="85dp"
+            android:background="@color/colorGrayLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </View>
+
+        <View
+            android:alpha="0.0"
+            android:id="@+id/imageView10"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="52dp"
+            android:background="@color/attentionColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="invisible" />
+
+
+        <View
+            android:alpha="0.0"
+            android:id="@+id/view5"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="44dp"
+            android:background="@color/attentionColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/filter_txt3"
+            tools:visibility="invisible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.navigation.NavigationView>
+
+
+
+
+
+
+
+

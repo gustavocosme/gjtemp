@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="buttonDisableSize">55dp</dimen>
+    <dimen name="inputLayoutHeightDate">45dp</dimen>
+    <dimen name="inputLayoutHeight">52dp</dimen>
+    <dimen name="buttonSizeOutlined">30dp</dimen>
+    <dimen name="textSizeDefault">15sp</dimen>
+    <dimen name="textSizeHeaderTitle">28sp</dimen>
+    <dimen name="inputTextRadius">3dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+</resources>

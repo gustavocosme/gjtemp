@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="24dp"
+    android:paddingTop="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/check1"
+        style="@style/Prudential.CheckStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="start"
+        android:text="Declaro que as informações fornecidas são verdadeiras e que concordo em atualizá-las se houver alteração nas circunstâncias que façam com que a informação alterada neste ato se torne incorreta ou incompleta."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></androidx.appcompat.widget.AppCompatCheckBox>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+        android:id="@+id/check2"
+        style="@style/Prudential.CheckStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="start"
+        android:text="Confirmo que sou residente fiscal apenas do(s) país(es) indicado(s) nos campos “Nacionalidade” e “Residência Fiscal."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check1"></androidx.appcompat.widget.AppCompatCheckBox>
+
+
+    <Button
+        android:layout_width="150dp"
+        android:id="@+id/btnNext"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_marginTop="40dp"
+        android:alpha="0.45"
+        android:clickable="false"
+        android:text="Confirmar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/check2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/recycler_extract_payment_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Cartão de crédito final 9292"
+            android:textColor="#999999"
+            android:textSize="11sp"
+            app:layout_constraintStart_toEndOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/recycler_extract_payment_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_mode" />
+
+        <View
+            android:id="@+id/recycler_extract_payment_bottom_line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGreenSuccess"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintStart_toStartOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_icon" />
+
+        <View
+
+            android:id="@+id/recycler_extract_payment_top_line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/colorGreenSuccess"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintStart_toStartOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/recycler_extract_payment_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/opensans_bold"
+            android:text="Pagamento do prêmio"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/textSizeDefault"
+            app:layout_constraintStart_toEndOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_mode" />
+
+        <TextView
+            android:id="@+id/recycler_extract_payment_paidvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="R$ 197,90"
+            android:textColor="@color/colorBlackText"
+            android:textSize="@dimen/textSizeDefault"
+            app:layout_constraintStart_toEndOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_title" />
+
+        <ImageView
+            android:id="@+id/recycler_extract_payment_arrow_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_extract_arrow_right"
+            app:tint="@color/colorGrayLight" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/recycler_extract_payment_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="05/09"
+            android:textColor="@color/colorBlackText"
+            android:textSize="@dimen/textSizeDefault"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_arrow_right" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/recycler_extract_payment_button"
+            android:layout_width="171dp"
+            android:layout_height="26dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_button_borderless_enable"
+            android:fontFamily="@font/opensans_regular"
+            android:foreground="?attr/selectableItemBackground"
+            android:includeFontPadding="true"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:padding="0dp"
+            android:text="Pagar"
+            android:textAllCaps="false"
+            android:textSize="14sp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/recycler_extract_payment_icon"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_paidvalue" />
+
+        <ImageView
+            android:id="@+id/recycler_extract_payment_tooltip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/recycler_extract_payment_button"
+            app:layout_constraintTop_toTopOf="@+id/recycler_extract_payment_button"
+            app:srcCompat="@drawable/ic_alert_gray" />
+
+        <TextView
+            android:paddingBottom="8dp"
+            android:id="@+id/recycler_extract_payment_payent_try_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="1 de 3 tentativas"
+            android:textAlignment="center"
+            android:textColor="@color/colorButtonBorder"
+            android:textSize="11sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_extract_payment_button"
+            app:layout_constraintStart_toStartOf="@+id/recycler_extract_payment_button"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_button" />
+
+        <TextView
+            android:id="@+id/l"
+            android:layout_width="0dp"
+            android:layout_height="16dp"
+            android:fontFamily="@font/opensans_regular"
+            android:textAlignment="center"
+            android:textColor="@color/colorButtonBorder"
+            android:textSize="11sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/recycler_extract_payment_button"
+            app:layout_constraintStart_toStartOf="@+id/recycler_extract_payment_button"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_button" />
+
+
+
+
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/recycler_extract_payment_payent_future_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Futuro"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_date" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.1"
+            android:background="@color/colorGrayLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"></View>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_extract_payment_paidvalue">
+
+
+        </View>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

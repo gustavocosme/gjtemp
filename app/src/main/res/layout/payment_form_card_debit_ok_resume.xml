@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF">
+
+
+    <ImageView
+        android:id="@+id/iconStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_ok_fill_green" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        style="@style/Prudential.TitleStyle"
+        android:layout_width="274dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Solicitação realizada com sucesso!"
+        android:textColor="@color/colorGreenSuccess"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/iconStatus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <prudential.pobmobilecustomerappandroid.ui.viewCustom.Protocol
+        android:id="@+id/cardCopyG"
+        android:layout_marginTop="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </prudential.pobmobilecustomerappandroid.ui.viewCustom.Protocol>
+
+    <TextView
+        android:id="@+id/txt1"
+        style="@style/Prudential.TitleStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Seu pagamento será por"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardCopyG" />
+
+    <TextView
+        android:id="@+id/txt2"
+        style="@style/Prudential.TitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="16dp"
+        android:text="Para os seguros:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1" />
+
+    <LinearLayout
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="88dp"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt2">
+
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/payment_update_period_ok_resume_item_custom_view"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/payment_update_period_ok_resume_item_custom_view"
+            />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/payment_update_period_ok_resume_item_custom_view"
+            />
+
+    </LinearLayout>
+
+
+    <prudential.pobmobilecustomerappandroid.ui.viewCustom.paymentFormCard.PaymentFormCardItem
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt1"></prudential.pobmobilecustomerappandroid.ui.viewCustom.paymentFormCard.PaymentFormCardItem>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/txtMessage"
+        style="@style/Prudential.SubTitleStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="texto qoryu weiruy iuewryiu weyr iu iuywer iuywer iuy weiury weiury"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+
+    <Button
+        android:id="@+id/btnNext"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_marginEnd="18dp"
+        android:text="Fechar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView10"
+        app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+    <Button
+        android:visibility="invisible"
+        android:id="@+id/btnBack"
+        style="@style/Prudential.ButtonStyle"
+        android:layout_width="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_button_selector"
+        android:text="Voltar"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="85dp"
+        android:background="@color/colorGrayLight"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </View>
+
+    <View
+        android:alpha="0.0"
+        android:id="@+id/imageView10"
+        android:layout_width="18dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="52dp"
+        android:background="@color/attentionColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="invisible" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

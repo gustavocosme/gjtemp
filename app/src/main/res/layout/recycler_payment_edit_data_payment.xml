@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/recycler_payment_edit_data_payment_icon"
+        android:layout_width="35dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_payment_edit_data_payment_title"
+         />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/recycler_payment_edit_data_payment_credit_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="recycler_payment_edit_data_payment_subtitle,recycler_payment_edit_data_payment_card_date" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/recycler_payment_edit_data_payment_bank_group"
+        android:visibility="visible"
+        app:constraint_referenced_ids="recycler_payment_edit_data_payment_agency, recycler_payment_edit_data_payment_account, recycler_payment_edit_data_payment_name_bank"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+
+    <TextView
+        android:id="@+id/recycler_payment_edit_data_payment_title"
+        style="@style/Prudential.HeaderTitleStyleOpenSans"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Vida Inteira Mais"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBlackText"
+        android:textSize="@dimen/textSizeDefault"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/recycler_payment_edit_data_payment_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Rua Visconde de Morais, 238 Niterói- RJ"
+        android:textColor="@color/colorBlackText"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_payment_edit_data_payment_card_date"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_payment_edit_data_payment_title"
+        app:layout_constraintStart_toEndOf="@+id/recycler_payment_edit_data_payment_icon"
+        app:layout_constraintTop_toTopOf="@+id/recycler_payment_edit_data_payment_icon" />
+
+    <TextView
+        android:id="@+id/recycler_payment_edit_data_payment_card_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Vencimento do cartão: 02/27"
+        android:textColor="@color/colorBlackLightTextSub"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_payment_edit_data_payment_icon"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_payment_edit_data_payment_subtitle"
+        app:layout_constraintStart_toStartOf="@+id/recycler_payment_edit_data_payment_subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_payment_edit_data_payment_subtitle" />
+
+    <TextView
+        android:id="@+id/recycler_payment_edit_data_payment_agency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="1dp"
+        android:text="Ag: 2283"
+        android:textColor="@color/colorBlackLightTextCard"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toTopOf="@+id/recycler_payment_edit_data_payment_name_bank"
+        app:layout_constraintStart_toEndOf="@+id/recycler_payment_edit_data_payment_icon"
+        app:layout_constraintTop_toTopOf="@+id/recycler_payment_edit_data_payment_icon" />
+
+    <TextView
+        android:id="@+id/recycler_payment_edit_data_payment_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Conta: 28398475-8"
+        android:textColor="@color/colorBlackLightTextCard"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_payment_edit_data_payment_agency"
+        app:layout_constraintEnd_toEndOf="@+id/recycler_payment_edit_data_payment_title"
+        app:layout_constraintStart_toEndOf="@+id/recycler_payment_edit_data_payment_agency"
+        app:layout_constraintTop_toTopOf="@+id/recycler_payment_edit_data_payment_agency" />
+
+    <TextView
+        android:id="@+id/recycler_payment_edit_data_payment_name_bank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maura da Costa Rodrigues"
+        android:textColor="@color/colorBlackLightTextCard"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/recycler_payment_edit_data_payment_icon"
+        app:layout_constraintStart_toStartOf="@+id/recycler_payment_edit_data_payment_agency"
+        app:layout_constraintTop_toBottomOf="@+id/recycler_payment_edit_data_payment_agency" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "POB.Mobile.Customer.App.Android"

@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingBottom="24dp"
+        android:id="@+id/containerG"
+        android:layout_width="match_parent"
+        android:layout_height="2000dp"
+        android:background="#FFF">
+
+        <TextView
+            android:id="@+id/txt1"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="16dp"
+            android:text="Adicione os seus dados bancários"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="121dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:elevation="1dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt1"
+            app:strokeColor="@color/colorGrayLight"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="#FFF">
+
+                <TextView
+                    android:id="@+id/txt000"
+                    style="@style/Prudential.TitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="12dp"
+                    android:text="Bancos aceitos"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/b1"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="11dp"
+                    android:src="@drawable/ic_bradesco"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt000"></ImageView>
+
+                <ImageView
+                    android:id="@+id/b4"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/ic_bradesco"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/b1"></ImageView>
+
+                <ImageView
+                    android:id="@+id/b6"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_bradesco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/b3"></ImageView>
+
+                <ImageView
+                    android:id="@+id/b5"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="13dp"
+                    android:src="@drawable/ic_bradesco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/b2"></ImageView>
+
+                <ImageView
+                    android:id="@+id/b3"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="44dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_bradesco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+                <ImageView
+                    android:id="@+id/b2"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="44dp"
+                    android:src="@drawable/ic_bradesco"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:id="@+id/txt22"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="22dp"
+            android:text="Banco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card" />
+
+        <TextView
+            android:id="@+id/textTips"
+            style="@style/Prudential.SubTitleStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/opensans_italic"
+            android:text="Para o Banco do Brasil, use o DV. Para os demais, apenas os quatro primeiros números."
+            android:textColor="@color/colorGrayLight"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCount" />
+
+        <TextView
+            android:id="@+id/txt44"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:text="Conta corrente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutAgency" />
+
+        <TextView
+            android:id="@+id/txt33"
+            style="@style/Prudential.TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Agência"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBank" />
+
+        <Button
+            android:id="@+id/btnSelect"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:alpha="0.0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt22"></Button>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            android:id="@+id/layoutBank"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:clipToPadding="true"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt22">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:focusable="false"
+                android:enabled="false"
+                android:id="@+id/txtBank"
+                style="@style/Prudential.InputTextStyle"
+                android:drawableRight="@drawable/ic_arrow_double"
+                android:drawablePadding="16dp"
+                android:hint="Selecione seu banco" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:id="@+id/listCard"
+            android:layout_height="220dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelect"
+            app:strokeColor="@color/colorGrayLight"
+            app:strokeWidth="1dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginLeft="8dp"
+                    android:id="@+id/list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:visibility="visible"
+                    tools:listitem="@layout/recycler_simple_select" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutAgency"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:clipToPadding="true"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt33">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAgency"
+                style="@style/Prudential.InputTextStyle"
+                android:hint="Digite sua agência"
+                android:imeOptions="actionNext"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            app:hintAnimationEnabled="false"
+            app:hintEnabled="false"
+            android:id="@+id/layoutCount"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/inputLayoutHeight"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:clipToPadding="true"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            app:boxCornerRadiusBottomEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusBottomStart="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopEnd="@dimen/inputTextRadius"
+            app:boxCornerRadiusTopStart="@dimen/inputTextRadius"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt44">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtCount"
+                style="@style/Prudential.InputTextStyle"
+                android:inputType="number"
+                android:imeOptions="actionSend"
+                android:hint="Digite sua conta" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/Prudential.ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_marginEnd="18dp"
+            android:text="Salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView10"
+            app:layout_constraintTop_toTopOf="@+id/btnBack" />
+
+        <Button
+            android:id="@+id/btnBack"
+            style="@style/Prudential.ButtonStyle"
+            android:layout_width="0dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_button_selector"
+            android:text="Fechar"
+            android:textColor="@color/colorPrimary"
+            android:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="54dp"
+            android:background="@color/colorGrayLight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutCount">
+
+        </View>
+
+        <View
+            android:id="@+id/imageView10"
+            android:layout_width="18dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="52dp"
+            android:alpha="0.0"
+            android:background="@color/attentionColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="invisible" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

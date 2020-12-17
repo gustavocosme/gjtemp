@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <prudential.pobmobilecustomerappandroid.ui.viewCustom.MenuSlide
+        android:id="@+id/menuSlide"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+    />
+
+    <!--
+    <prudential.pobmobilecustomerappandroid.ui.viewCustom.ExtractFilter
+        android:id="@+id/extractFilter"
+        android:fitsSystemWindows="true"
+        android:layout_marginRight="-45dp"
+        android:layout_marginEnd="-45dp"
+        android:layout_gravity="end|right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </prudential.pobmobilecustomerappandroid.ui.viewCustom.ExtractFilter>
+    -->
+
+
+    <prudential.pobmobilecustomerappandroid.ui.viewCustom.SlideNav
+        android:id="@+id/slideNav"
+        android:fitsSystemWindows="true"
+        android:layout_marginRight="-45dp"
+        android:layout_marginEnd="-45dp"
+        android:layout_gravity="end|right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </prudential.pobmobilecustomerappandroid.ui.viewCustom.SlideNav>
+
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
